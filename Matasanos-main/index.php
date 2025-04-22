@@ -1,5 +1,6 @@
 <?php
 require("logica/Especialidad.php");
+require_once("logica/Medico.php");
 ?>
 
 
@@ -118,8 +119,7 @@ require("logica/Especialidad.php");
 						foreach ($especialidades as $esp) {
 							echo "<li>" . $esp->getNombre();
 							// AQUI
-							require_once("logica/Medico.php");
-
+							
 							$medico = new Medico(); 
 							$medicos = $medico->consultarPorEspecialidad($esp->getId());
 
