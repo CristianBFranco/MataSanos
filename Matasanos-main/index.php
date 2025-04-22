@@ -1,6 +1,6 @@
 <?php
 require("logica/Especialidad.php");
-require_once("logica/Medico.php");
+require("logica/Medico.php");
 ?>
 
 
