@@ -6,22 +6,19 @@ abstract class Persona {
     protected $apellido;
     protected $correo;
     protected $clave;
-   
 
-    public function __construct($id = 0, $nombre = "", $apellido = "", $correo = "", $clave = "") {
-        $this->id = $id;
-        $this->nombre = $nombre;
-        $this->apellido = $apellido;
-        $this->correo = $correo;
-        $this->clave = $clave;
-       
+    public function __construct($id = "", $nombre="", $apellido="", $correo="", $clave="") {
+        $this -> id = $id;
+        $this -> nombre = $nombre;
+        $this -> apellido = $apellido;
+        $this -> correo = $correo;
+        $this -> clave = $clave;
     }
 
+    public function getId(){
+        return $this -> id;
+    }
     
-    public function getId() {
-        return $this->id;
-    }
-
     public function getNombre() {
         return $this->nombre;
     }
@@ -38,6 +35,24 @@ abstract class Persona {
         return $this->clave;
     }
 
-}
+    public function setId($id){
+        $this -> id = $id;
+    }
+    
+    public function setNombre($nombre) {
+        $this->nombre = $nombre;
+    }
 
+    public function setApellido($apellido) {
+        $this->apellido = $apellido;
+    }
+
+    public function setCorreo($correo) {
+        $this->correo = $correo;
+    }
+
+    public function setClave($clave) {
+        $this->clave = $clave;
+    }
+}
 ?>

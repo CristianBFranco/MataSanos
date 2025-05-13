@@ -1,6 +1,6 @@
 <?php
 require_once("persistencia/Conexion.php");
-require ("persistencia/EspecialidadDAO.php");
+require_once ("persistencia/EspecialidadDAO.php");
 
 
 class Especialidad{

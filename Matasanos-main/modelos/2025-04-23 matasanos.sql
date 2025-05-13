@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 15, 2025 at 12:11 AM
+-- Generation Time: Apr 23, 2025 at 10:52 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -187,14 +187,14 @@ CREATE TABLE `Medico` (
   `correo` varchar(45) NOT NULL,
   `clave` varchar(45) NOT NULL,
   `foto` varchar(45) DEFAULT NULL,
-  `Especialidad_id` int(11) NOT NULL
+  `Especialidad_idEspecialidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `Medico`
 --
 
-INSERT INTO `Medico` (`idMedico`, `nombre`, `apellido`, `correo`, `clave`, `foto`, `Especialidad_id`) VALUES
+INSERT INTO `Medico` (`idMedico`, `nombre`, `apellido`, `correo`, `clave`, `foto`, `Especialidad_idEspecialidad`) VALUES
 (1, 'Julius', 'Hibbert', 'jhibbert@springfield.com', '2a2d595e6ed9a0b24f027f2b63b134d6', NULL, 5),
 (2, 'Troy', 'McClure', 'TroyMcclure69@udistrital.edu.co', 'e10adc3949ba59abbe56e057f20f883e', NULL, 10),
 (3, 'Plopper', 'Simpson', 'PlopperS@gmail.com', '259e99cb4dc1bad404fd61c5d547f3bc', NULL, 1),
@@ -319,7 +319,7 @@ ALTER TABLE `Historia`
 --
 ALTER TABLE `Medico`
   ADD PRIMARY KEY (`idMedico`),
-  ADD KEY `fk_Medico_Especialidad1_idx` (`Especialidad_id`);
+  ADD KEY `fk_Medico_Especialidad1_idx` (`Especialidad_idEspecialidad`);
 
 --
 -- Indexes for table `Paciente`
@@ -391,7 +391,7 @@ ALTER TABLE `Historia`
 -- Constraints for table `Medico`
 --
 ALTER TABLE `Medico`
-  ADD CONSTRAINT `fk_Medico_Especialidad1` FOREIGN KEY (`Especialidad_id`) REFERENCES `Especialidad` (`idEspecialidad`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_Medico_Especialidad1` FOREIGN KEY (`Especialidad_idEspecialidad`) REFERENCES `Especialidad` (`idEspecialidad`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

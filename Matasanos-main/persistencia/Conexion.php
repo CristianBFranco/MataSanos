@@ -20,6 +20,10 @@ class Conexion{
         return $this -> resultado -> fetch_row();
     }
     
+    public function filas(){
+        return $this -> resultado -> num_rows;
+    }
+    
 }
 
 
