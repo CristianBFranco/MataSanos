@@ -1,10 +1,17 @@
 <?php
-if(!isset($_SESSION["id"]) || !isset($_SESSION["rol"]) || ($_SESSION["rol"] != "medico")){
-    header("Location: index.php");
+if($_SESSION["rol"] != "medico"){
+    header("Location: ?pid=" . base64_encode("presentacion/noAutorizado.php"));
 }
-$id = $_SESSION["id"];
-$medico = new Medico($id);
-$medico -> consultar();
-echo "Hola " . $medico -> getNombre() . " " . $medico -> getApellido();
-echo "Usted tiene la especialidad: " . $medico -> getEspecialidad() -> getNombre();
 ?>
+<body>
+<?php 
+include ("presentacion/encabezado.php");
+include ("presentacion/menuMedico.php");
+?>
+
+
+
+
+
+</body>
+
