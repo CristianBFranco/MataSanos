@@ -24,6 +24,7 @@ require ("logica/EstadoCita.php");
 <!-- FontAwesome -->
 <link href="https://use.fontawesome.com/releases/v6.7.2/css/all.css"
 	rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" ></script>
 </head>
@@ -40,6 +41,7 @@ $paginas_con_autenticacion = array(
     "presentacion/sesionMedico.php",
     "presentacion/sesionPaciente.php",
     "presentacion/cita/consultarCita.php",
+    "presentacion/paciente/buscarPaciente.php",
 );
 
 
